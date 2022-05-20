@@ -10,15 +10,15 @@ BE - https://magento.test/
 
 ## setup steps
 
-git clone git@github.com:rSapintanPi/m2Vue2.git
+`git clone git@github.com:rSapintanPi/m2Vue2.git && cd magento2`
 
-bin/download 2.4.4
+`bin/download 2.4.4`
 
-bin/setup magento.test
+`bin/setup magento.test`
 
-bin/magento sampledata:deploy
+`bin/magento sampledata:deploy`
 
-bin/magento setup:upgrade
+`bin/magento setup:upgrade`
 
 ##  extra info
 
@@ -28,7 +28,7 @@ bin/magento setup:upgrade
 
 `graycore/magento2-cors` -> This package allows you to securely add the necessary CORS headers to the Magento 2 GraphQL or REST APIs
 
-add after the "src" directory is visible add in app/etc/env.php following info:
+after the "src" directory is visible on your host add in app/etc/env.php following info:
 
 ```
 'system' => [
@@ -44,9 +44,9 @@ add after the "src" directory is visible add in app/etc/env.php following info:
     ]
 ]
 ```
-bin/magento setup:upgrade - if you want to avoid this command than add the above info after the sample data import
+`bin/magento setup:upgrade` - if you want to avoid this command than add the above info after the sample data import
 
-2. on FE I used the samne SSL certificate as we have for BE (we have same domain)
+2. on FE I used the same SSL certificate as we have for BE (we have same domain)
 
 ## current status
 
