@@ -1,0 +1,7 @@
+{
+  "reject": [
+    "husky",
+    "webpack",
+    "node-fetch"
+  ]
+}

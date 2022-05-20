@@ -1,0 +1,14 @@
+FROM node:16
+
+WORKDIR /var/www
+
+COPY ./vue2 .
+
+RUN yarn install
+
+RUN yarn build:api-client && yarn build:composables && yarn cache clean --all
+COPY vue2/run.sh /usr/local/bin/
+
+RUN chmod a+x /usr/local/bin/run.sh
+
+ENTRYPOINT ["run.sh"]
